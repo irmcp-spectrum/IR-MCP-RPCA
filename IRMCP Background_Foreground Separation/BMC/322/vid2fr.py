@@ -22,6 +22,5 @@ while ret:
 	ret, img = cap.read()
 	if ret:
 		count += 1
-		img = cv2.resize(img, (160, 128))
 		img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 		cv2.imwrite(im_path.format(count), img)
