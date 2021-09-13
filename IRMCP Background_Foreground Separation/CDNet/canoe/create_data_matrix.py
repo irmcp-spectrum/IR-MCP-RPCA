@@ -17,7 +17,6 @@ idx = []
 
 for i in range(len(input_imgs)):        
    img = Image.open(input_imgs[i]).convert('L')
-   img = img.resize((160, 128))
    img = np.array(img)
    img = img.astype(np.float64)
    img = np.reshape(img, (np.shape(img)[0]*np.shape(img)[1], -1))
@@ -25,7 +24,6 @@ for i in range(len(input_imgs)):
 
 for i in range(len(gt_imgs)):
    gt = Image.open(gt_imgs[i]).convert('L')
-   gt = gt.resize((160, 128))
    gt = np.array(gt)
    gt = gt.astype(np.float64)
    gt = np.reshape(gt, (np.shape(gt)[0]*np.shape(gt)[1], -1))
