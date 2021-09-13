@@ -13,7 +13,6 @@ idx = []
 
 for i in range(len(gt_imgs)):
    gt = Image.open(gt_imgs[i]).convert('L')
-   gt = gt.resize((160, 128))
    gt = np.array(gt)
    gt = gt.astype(np.float64)
    gt = np.reshape(gt, (np.shape(gt)[0]*np.shape(gt)[1], -1))
