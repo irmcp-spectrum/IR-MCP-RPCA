@@ -10,7 +10,6 @@ data = []
 while ret:
 	ret, img = cap.read()
 	if ret:
-		img = cv2.resize(img, (160, 128))
 		img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 		img = np.array(img)
 		img = img.astype(np.float64)
